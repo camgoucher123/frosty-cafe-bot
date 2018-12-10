@@ -1,0 +1,13 @@
+{
+  "name": "frostycafebot",
+   "description": "Frosty Cafe Bot",
+  "version": "0.0.0",
+  "main": "app.js",
+  "scripts": {
+     "start": "node app.js"
+  },
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "roblox-js": "^4.0.2"
+  }
+}
