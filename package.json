@@ -1,12 +1,13 @@
 {
   "name": "frostycafebot",
-  "version": "0.0.1",
-  "description": "Frosty Cafe Bot",
+   "description": "Frosty Cafe Bot",
+  "version": "0.0.0",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+     "start": "node app.js"
   },
-  "author": "camgoucher123",
-  "license": "ISC"
+  "dependencies": {
+    "discord.js": "^11.2.1",
+    "roblox-js": "^4.0.2"
+  }
 }
-
