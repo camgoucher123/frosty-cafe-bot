@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var roblox = require('roblox-js');
-var general = "364212912186982401"
+var general = "526054993732698123"
 var announcements = "365663781201641493"
-var frostycafebotlog = "521530669117997056"
+var frostycafebotlog = "526059763050741790"
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -180,23 +180,18 @@ message.channel.send('Pinging!').then(m => m.edit(`Pong! Latency is ${m.createdT
     if(message.member.roles.find("name", "Camgoucher123")){
       if (args.length <=1) return
       message.delete()
-    message.guild.channels.get("364212912186982401").send(argsresult.slice(4))
+    message.guild.channels.get("526054918092488724").send(argsresult.slice(4))
   }
-} 
-  //if(message.content.startsWith(prefix+'spam')){
-   // message.guild.members.get("id").send("MSG")
- //} 
-
-
-});
-
+}
+	
+	
 client.login(process.env.BOT_TOKEN)
 
 /*
 //roblox stuff under here
 var roblox = require('roblox-js');
 
-roblox.login({username: "RoomEscapeBOT", password: "y28xj8m3"}).then((success) => {
+roblox.login({username: "username", password: "password"}).then((success) => {
 
 }).catch(() => {console.log("Failed to login.");})
 
