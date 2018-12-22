@@ -183,7 +183,14 @@ message.channel.send('Pinging!').then(m => m.edit(`Pong! Latency is ${m.createdT
     message.guild.channels.get("526054918092488724").send(argsresult.slice(4))
   }
 }
-	
+  //if(message.content.startsWith(prefix+'spam')){
+   // message.guild.members.get("id").send("MSG")
+ //}
+
+
+});
+
+
 	
 client.login(process.env.BOT_TOKEN)
 
