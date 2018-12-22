@@ -180,7 +180,7 @@ message.channel.send('Pinging!').then(m => m.edit(`Pong! Latency is ${m.createdT
     if(message.member.roles.find("name", "Camgoucher123")){
       if (args.length <=1) return
       message.delete()
-    message.guild.channels.get("365663781201641493").send(argsresult.slice(4))
+    message.guild.channels.get("364212912186982401").send(argsresult.slice(4))
   }
 } 
   //if(message.content.startsWith(prefix+'spam')){
