@@ -183,10 +183,10 @@ message.channel.send('Pinging!').then(m => m.edit(`Pong! Latency is ${m.createdT
     message.reply("The Discord invite code is: https://discord.gg/NUtXnE2")
   }
   if(message.content.startsWith(prefix+'say')){
-    if(message.member.roles.find("name", "camgoucher123")){
+    if(message.member.roles.find("name", "Noted Customer")){
       if (args.length <=1) return
       message.delete()
-    message.guild.channels.get("526249697145520140").send(argsresult.slice(4))
+    message.guild.channels.get("526286321472503808").send(argsresult.slice(4))
   }
 }
   //if(message.content.startsWith(prefix+'spam')){
