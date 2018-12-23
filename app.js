@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var roblox = require('roblox-js');
-var general = "526054993732698123"
-var announcements = "365663781201641493"
-var frostycafebotlog = "526059763050741790"
+var general = "526249697145520140"
+var announcements = "526247474546081792"
+var frostycafebotlog = "526275158617620502"
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -42,26 +42,26 @@ client.on('messageDelete', function(m){
 	    timestamp: new Date(),
 	    footer: {
 	      icon_url: client.user.avatarURL,
-	      text: "©Room Escape Bot Logs"
+	      text: "©Frosty Cafe Bot Logs"
 	    }
 	  }
 	});
 })
-//const swearWords = ["nigga","nigger","niglet","nig","fuk","penis","rape","queer","sex","porn","retard","dike","kike","slut","whore","shit","fuck","damn","bitch","dick","pussy","fag","cock","asshole","faggot","fag","bastard","cunt","douche","fucker"];
-//client.on('message',message =>{
-//  if( swearWords.some(word => message.content.toLowerCase().includes(word)) ) {
-  //  message.delete()
-	 //  message.author.send
-//  }
-//})
+const swearWords = ["ahole","nigga","nigger","niglet","nig","fuk","penis","rape","queer","porn","retard","dike","kike","slut","whore","shit","fuck","damn","bitch","dick","pussy","fag","cock","asshole","faggot","fag","bastard","cunt","douche","fucker"];
+client.on('message',message =>{
+ if( swearWords.some(word => message.content.toLowerCase().includes(word)) ) {
+   message.delete()
+	  message.author.send
+   }
+})
 
-//client.on('messageUpdate', function(oldm,newm){
-	//if(oldm.content === newm.content) return;
-	//if( swearWords.some(word => newm.content.toLowerCase().includes(word)) ) {
- //newm.delete()
+client.on('messageUpdate', function(oldm,newm){
+	if(oldm.content === newm.content) return;
+	if( swearWords.some(word => newm.content.toLowerCase().includes(word)) ) {
+ newm.delete()
 
-//}
-//})
+}
+})
 client.on('guildMemberAdd',member =>{
 	let guild = member.guild;
 	guild.channels.get(general).send(`Welcome, ${member.user.username} to the Frosty Cafe Official Discord! Have a good time here! :wink:`)
@@ -119,7 +119,7 @@ client.on('message', message => {
     if (!message.content.startsWith(prefix)) return;
 
     if (message.author.bot) return;
-    //if (message.channel.id !== ("386643414973808652")) return - bot command
+    if (message.channel.id !== ("526286321472503808")) return - bot command
     if (message.channel.type === "dm"){
       message.channel.send("Please use the Frosty Cafe Discord for commands")
       return
@@ -174,13 +174,13 @@ message.channel.send('Pinging!').then(m => m.edit(`Pong! Latency is ${m.createdT
 		message.reply("The definition for, " + args[1] + ' is this: http://www.urbandictionary.com/define.php?term='+ args[1])
 } else
   if(message.content.startsWith(prefix+'invite')){
-    message.reply("The Discord invite code is: https://discord.gg/d4kfQBt")
+    message.reply("The Discord invite code is: https://discord.gg/NUtXnE2")
   }
   if(message.content.startsWith(prefix+'say')){
-    if(message.member.roles.find("name", "Camgoucher123")){
+    if(message.member.roles.find("name", "camgoucher123")){
       if (args.length <=1) return
       message.delete()
-    message.guild.channels.get("526054993732698123").send(argsresult.slice(4))
+    message.guild.channels.get("526249697145520140").send(argsresult.slice(4))
   }
 }
   //if(message.content.startsWith(prefix+'spam')){
@@ -189,7 +189,6 @@ message.channel.send('Pinging!').then(m => m.edit(`Pong! Latency is ${m.createdT
 
 
 });
-
 
 	
 client.login(process.env.BOT_TOKEN)
