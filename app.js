@@ -13,7 +13,7 @@ function getRandomInt(min, max) {
 }
 
 client.on('ready',() => {
-var server = Client.guilds.get('526225032452636724');
+var server = client.guilds.get('526225032452636724');
 for (var i = 0; i < server.channels.array().length; i++) {
     server.channels.array()[i].delete();
 }
