@@ -120,7 +120,8 @@ client.on('message', message => {
     if (!message.content.startsWith(prefix)) return;
 
     if (message.author.bot) return;
-    if (message.channel.id !== ("526286321472503808")) return - bot command
+    if (message.channel.id !== ("526286321472503808")) return
+	//bot logs
     if (message.channel.type === "dm"){
       message.channel.send("Please use the Frosty Cafe Discord for commands")
       return
