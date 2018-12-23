@@ -4,6 +4,7 @@ var roblox = require('roblox-js');
 var general = "526249697145520140"
 var announcements = "526247474546081792"
 var frostycafebotlog = "526275158617620502"
+var joinlogs = "526250289012015104"
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -64,11 +65,11 @@ client.on('messageUpdate', function(oldm,newm){
 })
 client.on('guildMemberAdd',member =>{
 	let guild = member.guild;
-	guild.channels.get(general).send(`Welcome, ${member.user.username} to the Frosty Cafe Official Discord! Have a good time here! :wink:`)
+	guild.channels.get(joinlogs).send(`Welcome, ${member.user.username} to the Frosty Cafe Official Discord! Have a good time here! :wink:`)
 })
 client.on('guildMemberRemove',member =>{
 	let guild = member.guild;
-	guild.channels.get(general).send(`Well, ${member.user.username} just left the Discord.. :sob:`)
+	guild.channels.get(joinlogs).send(`Well, ${member.user.username} just left the Discord.. :sob:`)
 })
 
 client.on('messageUpdate', function(oldm,newm){
